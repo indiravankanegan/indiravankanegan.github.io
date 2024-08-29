@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Van Kanegan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Indira Van Kanegan</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="ind-projects" class="section">
+            <h2>Machine Learning for Music Mood Classification - <a href="/music-project.pdf" target="_blank">Project Link</a> </h2>
+            
+            <!-- Data Analysis Project -->
+            <div class="project-category">
+                <p>In this study, we investigate the classification of mood in music using a dataset from the UC Irvine Machine Learning Repository, which includes 400 Turkish music samples categorized into four emotional states: relax, angry, sad, and calm. Using the chroma spectrogram features outlined in Er and Aydilek’s research on music emotion recognition, we assess the effectiveness of various machine learning classification techniques to improve automatic emotion recognition in music. </p>
+
+                <ul>
+                    <li class="project-deets">
+                        
+                        <h3>Objective</h3>
+                        <p>The objective of this paper is to evaluate various machine learning algorithms for classifying musical emotions using chroma spectrogram features. We aim to determine which classification method most accurately distinguishes between the emotional categories of relax, angry, sad, and calm. Additionally, we investigate whether certain emotions are more easily classified than others, providing insights into the relative difficulty of emotion recognition in music.</p>
+                        <h3>Methodology</h3>
+                        <p>We evaluated several machine learning algorithms to determine their effectiveness in classifying musical emotions. Naive Bayes was used to compute class probabilities based on feature independence, with experiments conducted on different feature correlation cutoffs to enhance performance. Multinomial Logistic Regression, which extends binary logistic regression to handle multi-class problems, was assessed for its ability to predict class probabilities. Boosting Tree Modeling, an ensemble technique combining multiple decision trees, and Random Forest, which constructs numerous decision trees with bagging and random feature selection, were both evaluated for their predictive power. XGBoosting, utilizing gradient boosting to refine predictions, was also analyzed for its accuracy and misclassification rates.</p>
+                        <p>Support Vector Machines (SVM) were explored using various kernel functions, including linear, polynomial, and radial basis functions, to identify the most effective configuration for separating classes. Linear Discriminant Analysis (LDA) aimed to maximize class separation while minimizing within-class variance, offering dimensionality reduction and robustness. Quadratic Discriminant Analysis (QDA) extended LDA by incorporating quadratic decision boundaries, allowing for non-linear separation of classes. Lastly, K-Nearest Neighbors (KNN) classified data points based on the majority class of their nearest neighbors, with the number of neighbors (k) optimized to balance model bias and variance.</p>
+                        <p>Each model’s performance was evaluated using cross-validation to determine optimal hyperparameters and assess accuracy. Metrics such as overall accuracy, confusion matrices, and class-specific misclassification rates were analyzed. Additionally, we investigated whether certain emotions were easier to classify than others by examining class-specific performance, aiming to uncover potential challenges and biases in the classification process.</p>
+
+                        <h3>Results</h3>
+                        <p>Our analysis demonstrated varied performance across the different models. Naive Bayes achieved an average test accuracy of 0.7875. Despite efforts to improve accuracy by removing correlated features, performance remained stable, reflecting the model's limitations in handling feature dependencies. Multinomial Logistic Regression had a lower accuracy of 0.725, hindered by its susceptibility to overfitting with high-dimensional data. Similar issues were observed with KNN, which achieved the lowest accuracy of 0.5875, largely due to the curse of dimensionality and the small k value used.</p>
+                        <p>Boosting Tree Modeling and Random Forest both showed strong performance, with accuracies of 0.8625 and 0.85, respectively. However, Boosting Tree Modeling struggled to classify Sad songs accurately, often misclassifying them as Relaxing. Random Forest faced similar challenges with the Sad and Relax categories. Conversely, XGBoosting provided a balanced misclassification rate across categories but had a slightly lower accuracy of 0.8325 compared to other tree-based methods. This balance suggests a stable performance despite its lower overall accuracy.</p>
+                        <p>SVM with a linear kernel achieved a test accuracy of 0.775, performing well on linear relationships but struggling with Sad songs. Polynomial and radial SVM kernels had even lower accuracies, with polynomial SVM at 0.6875 and radial SVM at 0.40, indicating issues with overfitting and generalization. LDA was one of the top performers, matching Boosting Tree Modeling with an accuracy of 0.8625. LDA stood out for its balanced misclassification rates across all emotional categories, unlike the Boosting Tree Model, which exhibited uneven performance. QDA, on the other hand, overfitted the training data, achieving perfect accuracy on training but only 0.6875 on the test set, with difficulties in classifying Relax and Sad categories.</p>
+                        <p>Overall, LDA and Boosting Tree Modeling emerged as the most effective, with LDA providing the most balanced performance across categories.</p>
+            
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>R Studio:</strong> Utilized extensively for statistical analysis and model building. R Studio provided a robust environment to implement and test various machine learning algorithms for music mood classification, including Naive Bayes, Logistic Regression, and Support Vector Machines.</li>
+                            <li><strong>GGPlot2:</strong> Employed to create detailed and customized visualizations of the classification results. This tool was essential for generating plots that illustrated the performance of different models and the distribution of classification errors across emotional categories.</li>
+                            <li><strong>Tidyverse:</strong> A suite of R packages used for data manipulation and cleaning. Tidyverse facilitated the preparation of the music dataset, making it easier to handle, transform, and analyze the data before applying machine learning techniques.</li>
+                            <li><strong>Excel:</strong> Used for initial data exploration and to create visually appealing tables for the final presentation. Excel helped in organizing the dataset and summarizing key findings in an accessible format, complementing the advanced analyses performed in R Studio.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+         
+        </section>
+        
+
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Indira Van Kanegan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

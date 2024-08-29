@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Van Kanegan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Indira Van Kanegan</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="ind-projects" class="section">
+            <h2>Plant-Based Recipe Web Application</h2>
+            
+            <!-- CompSci Project -->
+            <div class="project-category">
+                <p>Through this project, I gained significant insights into full-stack development, including the challenges of integrating frontend and backend components as well as working with 3rd party APIs. I identified and addressed gaps in my web development knowledge, enhancing my understanding of the end-to-end workflow. The experience allowed me to refine my skills in frontend development, particularly in creating a user-friendly interface and ensuring seamless functionality. This project not only deepened my technical expertise but also fueled my passion for developing solutions that support healthier and more sustainable living.</p>
+
+                <ul>
+                    <li class="project-deets">
+                        
+                        <h3>Objective</h3>
+                        <p>The objective of this web application was to develop a centralized platform for plant-based recipe inspiration, designed to simplify and promote plant-based eating. By offering a user-friendly interface and a diverse range of over 600 recipes, the goal was to make plant-based cooking more accessible and enjoyable for a broader audience.</p>
+                        <h3>Design and Development Process</h3>
+                        <h4>Design</h4>
+                        <p>The design process began with selecting a suitable API for recipe data retrieval. I opted for the Spoonacular API due to its extensive database and robust features. I used Postman to practice making API calls and understand the JSON object format, ensuring smooth integration with the application.</p>
+                        <p>With the API set, I focused on designing the user interface using Angular:</p>
+                        <ul>
+                            <li><b>User Authentication:</b> Created a login form enabling users to log in or create new accounts. Account creation involves answering dietary preference questions and setting a username and password, providing a personalized experience.</li>
+                            <li><b>Recipe Widget:</b> Developed a widget to display recipe images, titles, and types. The widget includes a button for detailed recipe views and a heart icon for liking and saving recipes. This encourages user interaction and personalization.</li>
+                            <li><b>Saved Recipes List:</b> Implemented a feature for users to access and manage their liked recipes, allowing them to view, save, and remove items from their list. This enhances user engagement by offering easy access to their favorite recipes.</li>
+
+                        </ul>
+                        <p>The application framework was designed with more features in mind, however, due to end of semester business, I had to pair down in complexity. That being said, I am working on adding the following enhancements:</p>
+                        <ul>
+                            <li><b>Filtering Feature:</b> Adding a filter option to refine recipe searches based on cost, cuisine, dietary restrictions, etc.</li>
+                            <li><b>Personalized Dashboard:</b> Creating an algorithm that considers user cooking/dietary preferences to generate a personalized dashboard, offering a tailored recipe experience.</li>
+                            <li><b>Tried Recipes Feature:</b> Developing a feature to track and display recipes a user has already tried, further personalizing the application.</li>
+
+                        </ul>
+                        <h4>Development</h4>
+                        <p>The development phase involved building both the frontend and backend components to implement the designed features:</p>
+                        <ul>
+                            <li><b>Frontend Development:</b> Utilized Angular to create the login system, interactive recipe widget, and saved recipes list. Integrated API calls for dynamic recipe data retrieval and ensured a responsive, user-friendly interface.</li>
+                            <li><b>Backend Development:</b> Established a simply yet robust backend with three main entities:
+                                <ul>
+                                    <li><b>User Entity:</b> Manages user data with a unique username and user ID as the primary key, facilitating secure authentication.</li>
+                                    <li><b>Recipe Entity:</b> Stores recipe information from Spoonacular, with a recipe ID as the primary key, allowing efficient data management.</li>
+                                    <li><b>Liked List Entity:</b> Used to implement a many-to-many relationship between users and recipes by linking unique recipe ID to a unique user ID, enabling dynamic interaction and personalization.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Links and Demos</h3>
+                        <ul>
+                            <li>I am currently working on transfering the backend to a cloud system and linking the web app to this site.</li>
+                        </ul>
+                        <h4>Demo Video:</h4>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ltUlvOsSXUs" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                        </iframe>
+                        <p> </p>
+                        <h4><a href="https://github.com/indiravankanegan/plantPlate" target="_blank">GitHub Repo</a></h4>
+                        <p> </p>
+
+                        <h3>Technologies Used</h3>
+                        <ul class="tech">
+                            <li><strong>Angular Framework</strong>: For building the dynamic frontend of the web application.</li>
+                            <li><strong>JavaScript</strong>: For implementing client-side functionality and interactivity.</li>
+                            <li><strong>HTML</strong>: For structuring the web pages.</li>
+                            <li><strong>CSS</strong>: For styling and designing the user interface.</li>
+                            <li><strong>Express.js</strong>: For handling server-side logic and API requests.</li>
+                            <li><strong>SQLite</strong>: For managing the application’s database.</li>
+                            <li><strong>APIs</strong>: Specifically, the Spoonacular API for recipe data retrieval.</li>
+                            <li><strong>Postman</strong>: For testing API calls and ensuring proper data handling.</li>
+
+                        </ul>
+                        
+                    </li>
+
+                </ul>
+         
+        </section>
+        
+
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Indira Van Kanegan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

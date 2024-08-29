@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Van Kanegan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Indira Van Kanegan</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="ind-projects" class="section">
+            <h2>Predicting Human Development Index and Development Status - <a href="/Final.html" target="_blank">Project Link</a> </h2>
+            
+            <!-- Data Analysis Project -->
+            <div class="project-category">
+                <p>This project leverages a comprehensive dataset from the World Health Organization (found on Kaggle) that includes health, educational, and economic indicators from almost every country. We looked into factors that go into a country's Human Development Index (HDI) as well as Development status ('developed' or 'developing'). HDI is a widely used metric that evaluates and compares the development levels of countries by integrating factors such as life expectancy, education, and income, however the exact method used to calculate HDI is unknown. Similarly, upon researching HDI, we discovered that according to the United Nations Statistical Division, there is no actual established criteria that defines a 'developed' nation nor distinguishes the categorical designation of a 'developing' nation. This led us to want to dive into what factors determine a country's status.</p>
+
+                <ul>
+                    <li class="project-deets">
+                        
+                        <h3>Objective</h3>
+                        <p> 1) Aimed to evaluate how well Human Development Index (HDI) can be predicted using combined models for Life Expectancy and GDP</p>
+                        <p> 2) Investigate which variables are most influential in determining a country's development status (developed vs. developing).</p>
+                        <h3>Methodology</h3>
+                        <p>To address the first objective, I began by identifying the most effective models for predicting Life Expectancy and GDP individually. After evaluating various regression techniques, it was determined that a Lasso regression model was the most performant for both outcomes. This model incorporated all relevant variables (excluding HDI, Life Expectancy, and GDP) and included a three-way interaction term among the variables. Subsequently, the coefficients from the two models were standardized to ensure consistency in units and averaged them to develop a new model for predicting HDI.</p>
+                        <p>To investigate the second objective, we developed and assessed four distinct models. The first model served as a comprehensive baseline by including all available variables from the dataset. The second model built upon this by incorporating two-way interactions between variables to explore if this additional complexity could enhance prediction accuracy. The third model focused specifically on healthcare-related variables, including metrics such as adult mortality, infant deaths, and various disease indicators. The fourth model concentrated on economic-related variables, such as percentage expenditure, total expenditure, and GDP, to assess their impact on predicting development status. Each model was evaluated for its ability to predict whether a country is developed or developing, and 10-fold cross-validation was performed to gather predictions and analyze errors for both developed and developing countries. Predictions were grouped by development status, and errors were plotted for comparison.</p>
+
+                        <h3>Results</h3>
+                        <p>The analysis of the first objective revealed that Lasso regression models with three-way interactions were the most effective for predicting Life Expectancy and GDP, achieving the lowest Root Mean Squared Error (RMSE) for both variables. However, when combining these predictions to develop a model for Human Development Index (HDI), the combined model, created by averaging coefficients from the individual Life Expectancy and GDP models, had an RMSE of 1.077 scaled units, indicating suboptimal performance. A comparison with a simpler linear regression model showed that, despite lower individual performance for Life Expectancy and GDP, the linear regression model performed better for predicting HDI. This suggests that simpler models may sometimes be more effective in integrating predictions across variables. Overall, while Lasso models excelled individually, the simpler linear regression model proved more accurate for HDI prediction, highlighting the complexities of model integration.</p>
+                        <p>The results from the second objective showed that the base model, which included all variables, achieved a predicted error of 6.73% and effectively distinguished between developed and developing countries. The model incorporating two-way interactions demonstrated a slight improvement in prediction accuracy with an overall error of 5.22%, though it showed a minor decrease in predicting developed countries specifically. The healthcare variables model, despite its focused approach, yielded a prediction error similar to the base model, indicating that healthcare variables alone did not significantly enhance prediction accuracy. The economic variables model, on the other hand, exhibited a substantial increase in prediction error with a value of 12.67%. This model had reduced accuracy for developed countries but improved for developing countries. Analysis of prediction errors revealed that developed countries consistently had higher errors compared to developing countries, attributed to the larger sample size of developing countries. Comparative assessment of the models highlighted that while the inclusion of two-way interactions improved accuracy, focusing on economic-related variables was more effective for predicting developing countries but less so for developed ones. This underscores the importance of incorporating diverse factors, including healthcare and education, in evaluating a country’s development status.</p>
+            
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>R Studio:</strong> The primary environment for executing the data analysis. It provided a robust platform for writing and running R code, which was essential for handling and processing the complex dataset.</li>
+                            <li><strong>GGPlot2:</strong> Used for visualizing the data and the results of our models. Its flexibility allowed for creating detailed and informative plots that helped in understanding the distribution and relationships between variables.</li>
+                            <li><strong>Tidyverse:</strong> A collection of R packages that facilitated data manipulation, visualization, and analysis. This toolkit was instrumental in cleaning and organizing the dataset, making it easier to perform the necessary analyses and build models.</li>
+                            <li><strong>Lasso Regression:</strong> Employed to build predictive models for Life Expectancy and GDP. Lasso regression helped in selecting important features and reducing overfitting by penalizing less relevant variables, leading to more accurate and interpretable models for our analysis.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+         
+        </section>
+        
+
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Indira Van Kanegan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

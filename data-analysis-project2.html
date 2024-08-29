@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Van Kanegan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Indira Van Kanegan</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="ind-projects" class="section">
+            <h2>Analysis of Agression in Ice Hockey - <a href="/hockey-analysis.pdf" target="_blank">Project Link</a> </h2>
+            
+            <!-- Data Analysis Project -->
+            <div class="project-category">
+                <p>This project examines the impact of NHL players' aggressive actions, particularly hits, on game outcomes. Our study analyzes self collected data from a one-week period of NHL games, focusing on seven  randomly chosen games out of 48 played between February 7th and February 14th, 2024. We observed 361 hits across the 7 games, detailing various aspects such as the timing, location, and outcomes associated with each hit. The research explores whether spreading aggression across multiple players or concentrating it among a few impacts team success and investigates if metrics like hit proportions and penalties can predict match results.</p>
+
+                <ul>
+                    <li class="project-deets">
+                        
+                        <h3>Objective</h3>
+                        <p> 1) Examine whether the distribution of aggressive actions (hits) among players impacts the outcome of NHL games, determining if a broader distribution of aggression is more beneficial than a concentrated approach.</p>
+                        <p> 2) Investigate whether team aggression metrics—such as the proportion of hits, open ice hits, and penalties—can be used to predict the likelihood of a team winning a game.</p>
+                        <h3>Methodology</h3>
+                        <p>To investigate the first objective, we divided the data into home and away teams for clarity. We then aggregated hits at the individual player level and merged this information with player playtime data from ESPN, which included both total and powerplay times. By converting these times into minutes and seconds, we were able to calculate hits per minute for each player. This metric allowed us to explore the distribution of aggression within teams. To address potential data limitations, we employed a bootstrapping technique, generating simulated samples to reduce the influence of outliers while maintaining a small sample size. This approach enabled us to recreate the distribution and perform a more robust analysis using t-tests.</p>
+                        <p>To investigate the second objective, we aggregated the total number of hits at the game level and split these into proportions for the winning and losing teams. Logistic regression models were constructed to predict the game outcome, with the binary variable "Winner" indicating whether the home team won. The predictor variables included the proportions of total hits, power play hits, and open ice hits attributed to the home team. I made four logistic regression models, each incorporating different combinations of these aggression metrics. Given the small sample size of 7 games, Leave-One-Out Cross-Validation (LOOCV) was employed to evaluate the performance of the models. Additionally, we conducted t-tests to compare the proportions of aggression metrics between winning and losing teams. To mitigate the limitations of the small sample size, bootstrapping techniques were used to simulate a larger dataset of 14 games.</p>
+
+                        <h3>Results</h3>
+                        <p>Our analysis revealed that losing teams, on average, had a higher number of hits per game compared to winning teams. However, these hits were not evenly distributed across players. Instead, losing teams exhibited a wider range of aggression levels, with some players showing higher hits per minute than their counterparts on winning teams. Winning teams, on the other hand, displayed a tighter distribution of aggression, centered around a lower average hits per minute. After bootstrapping the data, we found a consistent pattern: losing teams had a larger standard deviation in hits per minute, confirming a broader distribution of aggression. The t-test results from the bootstrapped samples showed statistically significant differences, leading us to conclude that increased aggression does not necessarily correlate with better performance and may reflect a team's emotional response to adversity rather than a successful strategy.</p>
+                        <p>The results from the logistic regression models revealed that Model 4, which included the proportions of total hits, power play hits, and open ice hits, exhibited the highest accuracy, achieving 100% accuracy through LOOCV. Examination of the coefficients indicated that a lower proportion of total hits and power play hits was associated with a higher likelihood of winning, while a higher proportion of open ice hits increased the chances of winning. The t-tests on the raw data showed a statistically significant difference in the proportion of power play hits between winning and losing teams. Bootstrapping further confirmed these findings, revealing significant differences in both total and power play hits, but no significant difference in open ice hits. These results suggest that specific aggression metrics, particularly total hits and power play hits, play a crucial role in determining game outcomes.</p>
+            
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>R Studio:</strong> Utilized for performing statistical analysis and modeling. It was crucial for handling and analyzing the hockey game data, including aggregating and calculating hit metrics, and for running logistic regression models.</li>
+                            <li><strong>GGPlot2:</strong> Employed to create visualizations of the data, such as hit distributions and game outcomes. This tool helped in understanding patterns and differences between winning and losing teams through clear, informative plots.</li>
+                            <li><strong>Tidyverse:</strong> A collection of R packages used for data manipulation and analysis. It was instrumental in cleaning and preparing the dataset, making it easier to perform the required statistical tests and models.</li>
+                            <li><strong>Logistic Regression:</strong> Applied to predict game outcomes based on aggression metrics. This technique allowed us to assess the impact of various types of hits on the likelihood of a team winning, incorporating different models to compare effectiveness.</li>
+                            <li><strong>Python:</strong> Used for additional data handling and analysis tasks. Python’s versatility facilitated various aspects of data processing, including bootstrapping techniques to simulate larger datasets and validate our results.</li>
+                            <li><strong>Pandas:</strong> A Python library employed for data manipulation and analysis. It was essential for organizing and processing the hockey game data, helping to perform the necessary calculations and prepare data for modeling.</li>
+                        </ul>
+                    </li>
+
+                </ul>
+         
+        </section>
+        
+
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Indira Van Kanegan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

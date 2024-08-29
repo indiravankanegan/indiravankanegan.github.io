@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indira Van Kanegan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Indira Van Kanegan</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/skills.html">Skills</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="ind-projects" class="section">
+            <h2>Addition of a News/Announcement Page to the UNC Computer Science Website</h2>
+            
+            <!-- CompSci Project -->
+            <div class="project-category">
+                <p>In this collaborative project, we developed a full-stack feature addition for the UNC-XL website, utilizing the Angular framework, Python, and PostgreSQL. This experience allowed me to effectively navigate and contribute to a large, pre-existing codebase, enhancing my proficiency in reading and interpreting existing documentation. I also honed my ability to seamlessly integrate new features into established systems, a key skill in software engineering roles. As the lead for frontend development, I was responsible for driving the design and implementation of the user interface, managing the HTML/CSS styling, and facilitating the connection between the frontend and backend components. This role deepened my passion for creating user-centric interfaces and strengthened my understanding of user-centered design principles. The project closely mirrored the structure and challenges of real-world software engineering tasks, making it a highly rewarding experience.</p>
+
+                <ul>
+                    <li class="project-deets">
+                        
+                        <h3>Objective</h3>
+                        <p>The goal of this project was to enhance the functionality of the UNC-XL website—a platform developed by and for UNC's Computer Science Department—by introducing a centralized news hub. This feature was designed to consolidate club announcements, recruiting events, and other important updates, streamlining communication for students. By providing a single, accessible location for news and announcements, we aimed to reduce the reliance on email notifications, offering a more efficient and user-friendly experience for the student body.</p>
+                        <h3>Design and Development Process</h3>
+                        <h4>Design</h4>
+                        <p>Our design process began by defining three key user personas: <i>Sally Student</i>, <i>Amy Ambassador</i>, and <i>Rhonda Root</i>, each with distinct roles and access levels. Given the project's focus on varying permissions, it was essential to clearly outline these user stories from the get-go to ensure a seamless and functional design.</p>
+                        <ol>
+                            <li><b>Sally Student:</b> This user persona represents the general student population. Sally can browse and view news article overviews on the homepage, as well as read the full articles. Her experience is centered around easy access to relevant information without additional permissions.</li>
+                            <li><b>Amy Ambassador:</b> Amy is a club leader or ambassador with elevated privileges. She can create and edit her own news articles, with the added responsibility of ensuring they meet the necessary standards before submission. Once submitted, her articles must be approved by a root user before they are published. Amy also has the ability to delete her own published articles and assign editing rights to other students.</li>
+                            <li><b>Rhonda Root:</b> Rhonda is the administrator with the highest level of access. She can manage all content on the platform, including adding, editing, deleting, and unarchiving articles. Her key role is to review and approve or reject content submitted by Amy and other ambassadors, ensuring quality and consistency across the platform.</li>
+                        </ol>
+                        <p>Once these user stories were established, I utilized Figma to create detailed wireframes for each web page, visualizing the user interface and interactions for all three user types. This step was very important in laying the groundwork for a cohesive and intuitive design.</p>
+                        <p>As one of the impromptu frontend development lead, I took charge of translating these wireframes into a fully functional user interface. My focus was on ensuring that the new features integrated with the existing website’s design while maintaining a user-friendly experience. Emphasizing user ease and alignment with the existing website flow, I ensured that each component was intuitive for all users—whether they were students, ambassadors, or administrators.</p>
+                        <p>While we aimed to incorporate numerous features in a slightly more user friendly way, the complexity of the project required us to prioritize certain aspects during implementation. Nonetheless, our final product successfully brought the wireframes to life, balancing functionality and usability. This experience reinforced my passion for frontend development and deepened my understanding of user-centered design.</p>
+                        <h4>Development</h4>
+                        <p>The development process began with our team diving into a large pre-existing codebase, which initially felt overwhelming. To overcome this, we dedicated time to thoroughly read documentation and held regular group meetings to discuss challenges and share insights. This collaborative approach helped us gradually build confidence in navigating the code and understanding its structure.</p>
+                        <p>Once we felt comfortable with the codebase, I took the lead on frontend development. My initial focus was on creating key components in Angular, including:</p>
+                        <ul class="what-i-did">
+                            <li><b>News Article Form:</b> A form that allowed users to submit new articles, incorporating validation - including character limits and drop down menu selections - and a user-friendly interface.</li>
+                            <li><b>Homepage Widget:</b> A dynamic widget to display news articles on the homepage, ensuring consistency and visual appeal.</li>
+                            <li><b>Article Details Page:</b> A detailed view for each news article, offering a clean and intuitive layout for users to read and interact with content.</li>
+                            <li><b>Frontend Storage:</b> Implemented mechanisms and objects for temporarily storing and managing news articles on the frontend before connecting them to the long term backend storage.</li>
+                        </ul>
+                        <p>During this process, I honed my skills in HTML, CSS, and JavaScript, learning on the go to ensure each component met both functional and aesthetic requirements.</p>
+                        <p>Meanwhile, a classmate focused on backend development, utilizing Python and PostgreSQL to handle data management and business logic. We coordinated our efforts through weekly check-ins and meetings, but most of the coding was done independently, with each of us working on our respective parts of the project.</p>
+                        <p>One of the biggest challenges arose when we began integrating the frontend with the backend. We quickly discovered discrepancies between the two, which caused some setbacks. Resolving these issues required a deep dive into both our frontend and backend code, ensuring compatibility and smooth communication between the components.</p>
+                        <p>Despite these hurdles, we persevered, and one of our final achievements was implementing multi-author support. This feature allowed multiple users to collaborate on a single article, adding a layer of complexity to both the frontend and backend. While it required significant effort, the successful implementation of this feature was incredibly rewarding and highlighted the value of teamwork and persistence.</p>
+                        <h3>Links and Demos</h3>
+                        <ul>
+                            <li>Unfortunately, the website is no longer live due to a recent revamp of the UNC-XL website, which introduced bugs in our class project code. However, please feel free to watch the demo above.</li>
+                        </ul>
+                        <h4>Demo Video:</h4>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hg7IAqQ7Y2I" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                        </iframe>
+                        <p> </p>
+                        <h4><a href="https://github.com/comp423-24s/csxl-final-team-c3" target="_blank">GitHub Repo</a></h4>
+                        <p> </p>
+
+                        <h3>Technologies Used</h3>
+                        <ul class="tech">
+                            <li><strong>Angular Framework:</strong> Used to build the dynamic and interactive components of the user interface, including the news article form and homepage widget.</li>
+                            <li><strong>JavaScript:</strong> Enabled the implementation of interactive features and dynamic behavior within the Angular framework.</li>
+                            <li><strong>HTML:</strong> Structured the content of the web pages, including the layout and elements for the news article form and article details page.</li>
+                            <li><strong>CSS:</strong> Styled the visual layout of the web pages, ensuring consistency and a visually appealing design across the application.</li>
+                            <li><strong>Figma Wireframes:</strong> Utilized to create detailed mockups and wireframes for the user interface, guiding the design and layout of the web pages.</li>
+                            <li><strong>Python:</strong> Used for backend development, handling server-side logic and interactions with the database.</li>
+                            <li><strong>PostgreSQL:</strong> Managed the data storage and retrieval on the backend, including handling user data and news articles.</li>
+                            <li><strong>GitHub Version Control:</strong> Managed the codebase, tracked changes, and facilitated collaboration between team members throughout the project.</li>
+                        </ul>
+                        
+                    </li>
+
+                </ul>
+         
+        </section>
+        
+
+        
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Indira Van Kanegan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,322 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    background-color: #faf3eb;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #fff;
+    padding: 20px 50px;
+    border-bottom: 2px solid #e5d5c5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e63946; /* Red */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+.about-container {
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.about-container p {
+    flex: 1;
+}
+
+.about-image {
+    width: 700px; 
+    height: auto;
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visual effect */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #0047ab;
+}
+
+#hero {
+    background-color: #e5d5c5;
+    color: #333;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.cta-button {
+    background-color: #e63946; /* Red */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0047ab; /* Cobalt Blue */
+    color: #fff; /* Ensuring the text color remains white on hover */
+}
+
+/* Section styling */
+.section {
+    padding: 60px 50px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-bottom: 2px solid #e5d5c5;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #fff;
+    padding: 20px 50px;
+    border-top: 2px solid #e5d5c5;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centering the content horizontally */
+    align-items: center; /* Centering the content vertically */
+    color: #666;
+
+}
+
+/* Adding more warmth and texture */
+body {
+    background-color: #faf3eb;
+}
+
+.section:nth-child(even) {
+    background-color: #f5ede4;
+}
+
+.section:nth-child(odd) {
+    background-color: #fff;
+}
+
+a {
+    color: #e63946;
+}
+
+a:hover {
+    color: #0047ab;
+}
+
+
+/* Contact section styling */
+
+
+.email-link {
+    color: #e63946; 
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #0047ab; 
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+.social-links a:hover {
+    color: #e63946; 
+}
+
+/* Skills section styling */
+#skills {
+    padding: 60px 50px;
+    background-color: #f5ede4; /* Warm neutral background */
+}
+
+.skill-category {
+    margin-bottom: 40px;
+}
+
+.skill-category h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e63946; /* Red underline for emphasis */
+    display: inline-block;
+}
+
+.skill-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.skill-category ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Projects section styling */
+#projects {
+    padding: 60px 50px;
+    background-color: #f5ede4; 
+}
+#ind-projects {
+    padding: 60px 50px;
+    background-color: #f9f3ec; 
+}
+
+.project-category {
+    margin-bottom: 40px;
+}
+
+
+.project-category h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e63946; /* Red underline for emphasis */
+    display: inline-block;
+}
+
+.project-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-category ul li {
+    margin-bottom: 20px;
+}
+
+
+.project-category ul li h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.project-category ul li h4 a {
+    text-decoration: none;
+    color: #e63946; /* Red link color */
+    transition: color 0.3s ease;
+}
+
+.project-category ul li h4 a:hover {
+    color: #0072b1; /* Cobalt Blue on hover */
+}
+
+.project-category ul li p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.project-deets > ul > li {
+    margin-left: 30px;
+    font-size: 16px;
+    color: #666;
+    list-style-type: disc
+}
+.project-deets > ul > li > ul > li{
+    margin-left: 30px;
+    font-size: 16px;
+    color: #666;
+    list-style-type: disc
+}
+.project-deets > ol > li {
+    margin-left: 30px;
+    font-size: 16px;
+    color: #666;
+    list-style-type: disc
+}
+
+.tech > li {
+    margin-left: 30px;
+    font-size: 16px;
+    color: #666;
+    list-style-type: disc;
+    line-height: 1 !important;
+}
+
+
